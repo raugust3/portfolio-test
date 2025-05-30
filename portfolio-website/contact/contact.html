@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact - Richard Augustine</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/png" href="../images/icons/4-point-star-icons-vector-31655182-removebg-preview.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="../sidebar.css">
+    <link rel="stylesheet" href="sidebar-contact.css">
+    <link rel="stylesheet" href="../general.css">
+    <link rel="stylesheet" href="../header.css">
+    <link rel="stylesheet" href="../dropdown-menu.css">
+<body>
+    <div id="dropdown-menu" class="dropdown-menu">
+        <div class="dropdown-buttons">
+            <a class="link" href="../home/home.html"><button class="home-dropdown">
+                HOME
+            </button></a>
+            <a class="link" href="../projects/projects.html"><button class="projects-dropdown">
+                PROJECTS
+            </button></a>
+            <a class="link" href="../contact/contact.html"><button class="contact-dropdown">
+                CONTACT
+            </button></a>
+        </div>
+    </div>
+    <div class="layout">
+        <div class="top">
+            <p class="name">
+                Richard Augustine <img class="hamburger-header-1" style="margin-left: 10px;" src="../images/icons/line.png"> 
+                <span class="samsung" style="color: rgb(238,159,0); margin-left: 10px;">
+                    CONTACT
+                </span>
+            </p>
+            <div class="top-right">
+                <button id="hamburger-menu" class="hamburger-button" onclick="openMenu()">
+                    <img id="hamburger-menu" class="hamburger-header" src="../images/icons/hmenu.png">
+                </button>
+                <button id="close-button" class="close-button" onclick="closeMenu()">
+                    <img id="close-header" class="close-header" src="../images/icons/closeMenu.png">
+                </button>
+            </div>
+        </div>
+        <div class="left">
+            <div>
+                <p class="title">
+                    I’m Richard Augustine — a Mechatronics and Artificial Intelligence Systems Engineering student at Western University
+                </p>
+            </div>
+            <div class="sidebar-buttons">
+                <a class="link" href="../home/home.html"><button class="home-button">
+                    HOME
+                </button></a>
+                <a class="link" href="../projects/projects.html"><button class="projects-button">
+                    PROJECTS
+                </button></a>
+                <a class="link" href="contact.html"><button class="contact-button">
+                    CONTACT
+                    <img class="star" src="../images/icons/4-point-star-icons-vector-31655182-removebg-preview.png">
+                </button></a>
+            </div>
+        </div>
+        <div class="right fade-in">
+            <div class="about-container">
+                <div class="p1">
+                    <p class="about">
+                        Thank you for taking the time to explore my website and for your interest in my work. You can contact me through:
+                    </p>
+                </div>
+                <div class="p2">
+                    <p class="about">
+                        <i>School</i>: <a href="mailto:raugust3@uwo.ca" target="_blank" class="url">raugust3@uwo.ca</a>
+                    </p>
+                    <p class="about">
+                        <i>Email</i>: <a href="mailto:richard.augustine95@gmail.com" target="_blank" class="url">
+                            richard.augustine95@gmail.com
+                        </a>
+                    </p>
+                </div>
+                <div class="p3">
+                    <p class="about">
+                    <i>LinkedIn</i>: <a href="https://www.linkedin.com/in/richard-augustine/" target="_blank" class="url">
+                        https://www.linkedin.com/in/richard-augustine/
+                    </a>
+                    </p>
+                    <p class="about">
+                        <i>GitHub</i>: <a href="https://github.com/raugust3" target="_blank" class="url">
+                            https://github.com/raugust3
+                        </a>
+                    </p>
+                </div>
+                <div class="p4">
+                    <p class="about">
+                        Looking forward to hearing from you! 
+                    </p>
+                </div>
+            </div>
+            <div class="about-container-small">
+                <div class="p1">
+                    <p class="about">
+                        Thank you for taking the time to explore my website and for your interest in my work. You can contact me through:
+                    </p>
+                </div>
+                <div class="p2">
+                    <p class="about">
+                        <a href="mailto:raugust3@uwo.ca" target="_blank" class="url">School Email</a>
+                    </p>
+                    <p class="about">
+                        <a href="mailto:richard.augustine95@gmail.com" target="_blank" class="url">
+                            Work Email
+                        </a>
+                    </p>
+                </div>
+                <div class="p3">
+                    <p class="about">
+                    <a href="https://www.linkedin.com/in/richard-augustine/" target="_blank" class="url">
+                        LinkedIn
+                    </a>
+                    </p>
+                    <p class="about">
+                        <a href="https://github.com/raugust3" target="_blank" class="url">
+                            GitHub
+                        </a>
+                    </p>
+                </div>
+                <div class="p4">
+                    <p class="about">
+                        Looking forward to hearing from you! 
+                    </p>
+                </div>
+            </div>            
+        </div>
+    </div>
+    <script>
+        const dropdown = document.getElementById('dropdown-menu');
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+        const closeButton = document.getElementById('close-button');
+        const closeHeader = document.getElementById('close-header');
+
+        function openMenu() {
+            dropdown.classList.add('show');
+            hamburgerMenu.classList.add('hide');
+            closeButton.classList.add('show');
+            closeHeader.classList.add('show');
+        }
+
+        function closeMenu() {
+            dropdown.classList.remove('show');
+            hamburgerMenu.classList.remove('hide');
+            closeButton.classList.remove('show');
+            closeHeader.classList.remove('show');
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll('.fade-in').forEach((el, index) => {
+                setTimeout(() => {
+                    el.classList.add('visible');
+                }, index * 300);
+            });
+        });
+    </script>
+</body>
+</html>
